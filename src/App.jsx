@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 // import Navbar from './assets/Navbar/Navbar'
 // import Content from './assets/Content/Content'
 // import Footer from "./assets/Footer/Footer"
 // import DarkMode from './assets/DarkMode/DarkMode'
+// import TodoList from './assets/class/todolist'
+// import State from './assets/State'
 
-import TodoList from './assets/class/todolist'
+// import NewTodoList from './assets/Class/Newtodolist'
 
 function App() {
   return (
@@ -17,7 +17,11 @@ function App() {
       {/* <Footer/> */}
       {/* <DarkMode/> */}
 
-      <TodoList/>
+      {/* <TodoList/> */}
+
+      {/* <NewTodoList/> */}
+
+      {/* <State/> */}
   
     </>
   )

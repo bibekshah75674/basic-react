@@ -3,7 +3,7 @@ import "./Navbar.css"
 function Navbar(props){
     return(
         <>
-            <div className="header">
+            <div className="header" >
 
                 <h1>{props.title}</h1>
 
@@ -15,8 +15,10 @@ function Navbar(props){
                         <li className="list-item"><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-
             </div>
+            <h1 className="heading text-red-600 ">Hello world</h1>
+            <p className="text-green-950">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, corporis.</p>
+
         </>
     )
 }
