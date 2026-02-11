@@ -10,6 +10,7 @@ import './App.css'
 // import NewTodoList from './assets/Class/Newtodolist'
 
 // import ProductLists from './assets/ProductList'
+import CourseLists from './assets/CourseList'
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
       {/* <State/> */}
 
       {/* <ProductLists/> */}
+
+      <CourseLists/>
   
     </>
   )
