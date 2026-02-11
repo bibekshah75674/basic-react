@@ -12,7 +12,7 @@ const CourseLists = ()=> {
     category: "MERN",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Riwaj Neupane"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const CourseLists = ()=> {
     category: "MERN",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Riwaj Neupane"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const CourseLists = ()=> {
     category: "Data Science",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Manash Bhele"
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const CourseLists = ()=> {
     category: "Data Science",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Rikesh Kayastha"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const CourseLists = ()=> {
     category: "Digital marketing",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Anup Khanal"
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const CourseLists = ()=> {
     category: "Digital marketing",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Rupesh Tirpathee"
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const CourseLists = ()=> {
     category: "Digital marketing",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Bikram Timilsina"
   },
   {
     id: 8,
@@ -82,7 +82,7 @@ const CourseLists = ()=> {
     category: "UI/UX",
     totalWeeks: 12,
     lessons : 1,
-    instructor : "Suryaraj Timsina"
+    instructor : "Viplab Shahi"
   }
     ])
 
