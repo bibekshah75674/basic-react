@@ -9,11 +9,12 @@
 
 .footer{
     background-color: #282727;
-    height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+    padding: 30px;
 }
 
 .footer-content{
@@ -27,6 +28,10 @@
 
 .paragraph-content{
     text-align: center;
+}
+
+.logos{
+    display: flex;
 }
 
 
