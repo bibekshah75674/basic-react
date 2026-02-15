@@ -14,11 +14,12 @@ import { CourseDetailPage } from "./assets/CourseDetailPage";
 import CourseLists from "./assets/CourseList";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import TextForm from "./assets/TextForm";
 
 function App() {
   return (
     <>
-      <div className="app-container">
+      {/* <div className="app-container">
         <Navbar title={"Foolish Developer1"} />
 
         <main className="main-content">
@@ -34,6 +35,10 @@ function App() {
         </main>
         
         <Footer />
+      </div> */}
+
+      <div className="container">
+          <TextForm title={"Enter the text to analyze below"}/>
       </div>
     </>
   );
