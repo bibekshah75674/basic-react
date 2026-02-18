@@ -40,6 +40,7 @@ function App() {
       <div className="container">
           <TextForm title={"Enter the text to analyze below"}/>
       </div>
+      Hello I am Bibek
     </>
   );
 }
