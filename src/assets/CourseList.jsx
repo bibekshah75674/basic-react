@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CourseCard } from "./CourseCard";
 import mernImage from "./images/mernimage.png";
-
+  
 const CourseLists = ()=> {
     const [courses,setCourses] = useState([
         {

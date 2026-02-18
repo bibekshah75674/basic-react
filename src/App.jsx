@@ -15,11 +15,14 @@ import CourseLists from "./assets/CourseList";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import TextForm from "./assets/TextForm";
+import PageNotFound from "./assets/PageNotFound";
+
+
 
 function App() {
   return (
     <>
-      {/* <div className="app-container">
+      <div className="app-container">
         <Navbar title={"Foolish Developer1"} />
 
         <main className="main-content">
@@ -30,17 +33,14 @@ function App() {
             
             <Route path="todolist" element={<TodoList />} />
             <Route path="darkmode" element={<DarkMode />} />
-            <Route path="/*" element = {<h1>Page not found</h1>}/>
+            {/* <Route path="/*" element = {<h1>Page not found</h1>}/> */}
+            <Route path="/*" element = {<PageNotFound/>}/>
           </Routes>
         </main>
         
         <Footer />
-      </div> */}
-
-      <div className="container">
-          <TextForm title={"Enter the text to analyze below"}/>
       </div>
-      Hello I am Bibek
+
     </>
   );
 }
