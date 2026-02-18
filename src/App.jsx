@@ -37,9 +37,10 @@ function App() {
         <Footer />
       </div> */}
 
-      <div className="container">
+      {/* <div className="container">
           <TextForm title={"Enter the text to analyze below"}/>
-      </div>
+      </div> */}
+      
     </>
   );
 }
