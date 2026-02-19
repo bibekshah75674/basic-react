@@ -1,12 +1,14 @@
-import BlogPage from "./assets/BlogPage";
+// import BlogPage from "./assets/BlogPage";
 // import {UserList} from "./assets/UserList";
+import NewsPortal from "./assets/NewsPortal";
 
 
 function App() {
   return (
     <>
-      <BlogPage/>
+      {/* <BlogPage/> */}
       {/* <UserList/> */}
+      <NewsPortal/>
     </>
   );
 }
