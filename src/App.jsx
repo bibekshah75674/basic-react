@@ -16,31 +16,13 @@ import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import TextForm from "./assets/TextForm";
 import PageNotFound from "./assets/PageNotFound";
-
+import BlogPage from "./assets/BlogPage";
 
 
 function App() {
   return (
     <>
-      <div className="app-container">
-        <Navbar title={"Foolish Developer1"} />
-
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<h1>Homepage</h1>} />
-            <Route path="courses" element={<CourseLists />} />
-            <Route path="courses/:id" element={<CourseDetailPage/>} />
-            
-            <Route path="todolist" element={<TodoList />} />
-            <Route path="darkmode" element={<DarkMode />} />
-            {/* <Route path="/*" element = {<h1>Page not found</h1>}/> */}
-            <Route path="/*" element = {<PageNotFound/>}/>
-          </Routes>
-        </main>
-        
-        <Footer />
-      </div>
-
+      <BlogPage/>
     </>
   );
 }
