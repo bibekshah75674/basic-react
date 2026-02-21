@@ -1,15 +1,15 @@
-// import BlogPage from "./assets/BlogPage";
+import BlogPage from "./assets/BlogPage";
 // import {UserList} from "./assets/UserList";
 // import NewsPortal from "./assets/NewsPortal";
 
-import NewTodoList from "./assets/Class/Newtodolist";
+// import NewTodoList from "./assets/Class/Newtodolist";
 
 
 function App() {
   return (
     <>
-      <NewTodoList/>
-      {/* <BlogPage/> */}
+      {/* <NewTodoList/> */}
+      <BlogPage/>
       {/* <UserList/> */}
       {/* <NewsPortal/> */}
     </>
