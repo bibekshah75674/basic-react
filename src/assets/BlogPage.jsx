@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BlogPage = () => {
   const [title, setTitle] = useState("");
@@ -274,10 +275,13 @@ const BlogPage = () => {
                   </span>
                 </div>
 
-                <div className="flex justify-between gap-1">
-                  <button className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full">
+                <div className="flex gap-1">
+                  <Link to={`${item.id}`} className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full text-center">
+                  <button>
                     View
                   </button>
+                  </Link>
+
                   <button
                     className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full"
                     onClick={() => {

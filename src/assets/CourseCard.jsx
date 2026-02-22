@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export const CourseCard = ({item})=>{
     return(
         <>
-            <div className="border p-4 rounded-lg shadow-md w-100 h-100 m-8">
+            <div className="border p-4 rounded-lg shadow-md w-80 h-104 m-8 flex flex-col gap-1.5">
                 <img src={item.image} alt=""/>
                 <h2 className="font-bold bg-gray-300">{item.name}</h2>
                 <p>{item.description}</p>

@@ -8,6 +8,9 @@ import { Route } from "react-router-dom";
 import BlogDetailPage from "./BlogDetailPage";
 import NewNav from "./assets/NewNav";
 
+import { CourseDetailPage } from "./assets/CourseDetailPage";
+import CourseLists from "./assets/CourseList";
+
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="/" element={<h1>This is the home page</h1>}></Route>
         <Route path="about" element={<h1>This is about page</h1>}></Route>
         <Route path="blogs" element={<BlogPage/>}></Route>
+        <Route path="blogs/:id" element={<BlogDetailPage/>}></Route>
+        <Route path="courses" element={<CourseLists />} />
+        <Route path="courses/:id" element={<CourseDetailPage/>} />
         <Route path="news" element={<NewsPortal/>}></Route>
         <Route path="contact" element={<h1>This is contact page</h1>}></Route>
       </Routes>
@@ -28,3 +34,4 @@ function App() {
 }
 
 export default App;
+

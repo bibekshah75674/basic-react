@@ -105,7 +105,7 @@ const CourseLists = ()=> {
                 <button className="px-10 py-2 rounded-full border border-gray-400 text-gray-700 hover:bg-indigo-600 hover:text-white transition-colors" onClick={() => setCategory("UI/UX")}>UI/UX</button>
             </div>
 
-        <div className="card-list grid grid-cols-4 gap-4">
+        <div className="card-list grid grid-cols-4">
         {filterCourses.map((item,index)=>(
                 <CourseCard key={item.id} item={item}/>
             )
