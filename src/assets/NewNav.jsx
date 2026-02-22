@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function NewNav(props) {
   return (
     <>
-    <div className='flex justify-between items-center p-8 bg-orange-500'>
+    <div className='flex justify-between items-center p-8 bg-orange-500 sticky top-0'>
       <div className='text-4xl font-medium text-amber-50'>
         <h1>{props.title}</h1>
       </div>
