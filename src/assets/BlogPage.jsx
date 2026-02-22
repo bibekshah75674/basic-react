@@ -6,7 +6,7 @@ const BlogPage = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const[selectedCategory,setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [author, setAuthor] = useState("");
   const [date, setDate] = useState("");
   const [image, setImage] = useState("");
@@ -118,7 +118,10 @@ const BlogPage = () => {
     setBlogs(updatedBlog);
   };
 
-  const filteredByCategory = selectedCategory === "all" ? blogs :blogs.filter((item,index)=>item.category === selectedCategory);
+  const filteredByCategory =
+    selectedCategory === "all"
+      ? blogs
+      : blogs.filter((item, index) => item.category === selectedCategory);
 
   return (
     <>
@@ -210,37 +213,55 @@ const BlogPage = () => {
             <div className="categories-btns flex-1 flex flex-row justify-center">
               <button
                 className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-                onClick={()=>setSelectedCategory("all")}
+                onClick={() => setSelectedCategory("all")}
               >
                 All
               </button>
               <button
                 className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-                onClick={()=>setSelectedCategory("Technology")}
+                onClick={() => setSelectedCategory("Technology")}
               >
                 Technology
               </button>
               <button
                 className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-                onClick={()=>setSelectedCategory("Design")}
+                onClick={() => setSelectedCategory("Design")}
               >
                 Design
               </button>
               <button
                 className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-                onClick={()=>setSelectedCategory("Health")}
+                onClick={() => setSelectedCategory("Health")}
               >
                 Health
               </button>
               <button
                 className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-                onClick={()=>setSelectedCategory("Travel")}
+                onClick={() => setSelectedCategory("Travel")}
               >
                 Travel
               </button>
             </div>
           </div>
         </div>
+
+        {/*  */}
+        <div className=" bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg w-76 flex">
+        <label htmlForfor="category">Choose a category:</label>
+        <select
+          id="category"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="px-4 py-2 rounded-lg border border-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50 text-gray-700 font-medium transition"
+        >
+          <option value="all">All</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Health">Health</option>
+          <option value="Travel">Travel</option>
+        </select>
+        </div>
+        {/*  */}
 
         <div className="grid grid-cols-3 m-8 mt-0 gap-4">
           {filteredByCategory.map((item, index) => (
@@ -276,10 +297,11 @@ const BlogPage = () => {
                 </div>
 
                 <div className="flex gap-1">
-                  <Link to={`${item.id}`} className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full text-center">
-                  <button>
-                    View
-                  </button>
+                  <Link
+                    to={`${item.id}`}
+                    className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full text-center"
+                  >
+                    <button>View</button>
                   </Link>
 
                   <button
