@@ -10,7 +10,7 @@ import NewNav from "./assets/NewNav";
 
 import { CourseDetailPage } from "./assets/CourseDetailPage";
 import CourseLists from "./assets/CourseList";
-import TextForm from "./assets/TextForm";
+// import TextForm from "./assets/TextForm";
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="blogs/:id" element={<BlogDetailPage/>}></Route>
         <Route path="courses" element={<CourseLists />} />
         <Route path="courses/:id" element={<CourseDetailPage/>} />
-        <Route path="textform" element={<TextForm/>} />
+        {/* <Route path="textform" element={<TextForm/>} /> */}
         <Route path="news" element={<NewsPortal/>}></Route>
         <Route path="contact" element={<h1>This is contact page</h1>}></Route>
       </Routes>
