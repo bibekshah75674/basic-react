@@ -137,6 +137,8 @@ const BlogPage = () => {
         </div>
         {/*  */}
 
+        <h1 className="text-3xl font-bold text-center text-orange-600 mb-8">Recent Blogs</h1>
+
         <div className="grid grid-cols-3 m-8 mt-0 gap-4">
           {filteredByCategory.map((item, index) => (
             <div
