@@ -10,6 +10,7 @@ import NewNav from "./assets/NewNav";
 
 import { CourseDetailPage } from "./assets/CourseDetailPage";
 import CourseLists from "./assets/CourseList";
+import BlogForm from "./assets/BlogForm";
 // import TextForm from "./assets/TextForm";
 
 
@@ -20,11 +21,13 @@ function App() {
       {/* <NewTodoList/> */}
       {/* <BlogPage/> */}
       {/* <UserList/> */}
+
       <Routes>
         <Route path="/" element={<h1>This is the home page</h1>}></Route>
         <Route path="about" element={<h1>This is about page</h1>}></Route>
         <Route path="blogs" element={<BlogPage/>}></Route>
         <Route path="blogs/:id" element={<BlogDetailPage/>}></Route>
+        <Route path="blogform" element={<BlogForm/>}></Route>
         <Route path="courses" element={<CourseLists />} />
         <Route path="courses/:id" element={<CourseDetailPage/>} />
         {/* <Route path="textform" element={<TextForm/>} /> */}

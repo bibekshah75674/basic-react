@@ -13,6 +13,7 @@ function NewNav(props) {
           <li><Link to="/">Home</Link></li>
           <li><Link to="about">About</Link></li>
           <li><Link to="blogs">Blog</Link></li>
+          <li><Link to="blogform">Blog Form</Link></li>
           <li><Link to="courses">Courses</Link></li>
           {/* <li><Link to="textform">TextForm</Link></li> */}
           <li><Link to="news">News</Link></li>
