@@ -3,14 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const BlogPage = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [author, setAuthor] = useState("");
-  const [date, setDate] = useState("");
-  const [image, setImage] = useState("");
-
   const [blogs, setBlogs] = useState([
     {
       id: 1,
@@ -69,41 +62,6 @@ const BlogPage = () => {
     },
   ]);
 
-  const addBlog = () => {
-    if (
-      title.trim() === "" ||
-      description.trim() === "" ||
-      category.trim() === "" ||
-      author.trim() === "" ||
-      date.trim() === ""
-    ) {
-      alert("No fields must be empty.");
-      return;
-    }
-
-    const newblog = {
-      id: Date.now(),
-      title: title,
-      description: description,
-      category: category,
-      author: author,
-      date: date,
-      image:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1000",
-    };
-
-    setBlogs([...blogs, newblog]);
-    setTitle("");
-    setDescription("");
-    setCategory("");
-    setAuthor("");
-    setDate("");
-  };
-
-  const submit = () => {
-    localStorage.setItem("blogs", JSON.stringify(blogs));
-  };
-
   useEffect(() => {
     const valuefromlocal = localStorage.getItem("blogs");
     if (valuefromlocal) {
@@ -111,12 +69,6 @@ const BlogPage = () => {
       setBlogs(properValue);
     }
   }, []);
-
-  // Delete Blog
-  const deleteBlog = (indexToDelete) => {
-    const updatedBlog = blogs.filter((item, index) => index !== indexToDelete);
-    setBlogs(updatedBlog);
-  };
 
   const filteredByCategory =
     selectedCategory === "all"
@@ -127,84 +79,6 @@ const BlogPage = () => {
     <>
       <div className="parent bg-[#FBF8EE]">
         <div className="input-field grid grid-cols-1 m-8 mt-0">
-          <h1 className="text-4xl font-semibold mb-2.5 text-orange-600 mt-4">
-            Add a Blog
-          </h1>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="blog-title" className="text-lg text-orange-600">
-              Blog Title:{" "}
-            </label>
-            <input
-              id="blog-title"
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-orange-600 transition "
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="blog-desc" className="text-lg text-orange-600">
-              Description:{" "}
-            </label>
-            <textarea
-              id="blog-desc"
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-orange-600 transition"
-              rows={3}
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="blog-category" className="text-lg text-orange-600">
-              Category:{" "}
-            </label>
-            <input
-              id="blog-category"
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-orange-600 transition"
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="blog-author" className="text-lg text-orange-600">
-              Author:{" "}
-            </label>
-            <input
-              id="blog-author"
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-orange-600 transition"
-              type="text"
-              value={author}
-              onChange={(e) => setAuthor(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label htmlFor="blog-date" className="text-lg text-orange-600">
-              Date:{" "}
-            </label>
-            <input
-              id="blog-date"
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-orange-600 transition"
-              type="text"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-          </div>
-
-          <div>
-            <button
-              className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition font-semibold text-base"
-              onClick={addBlog}
-            >
-              Add Blog
-            </button>
-          </div>
-
           {/* categories */}
           <div className="flex flex-col gap-2">
             <span className="text-3xl font-semibold text-orange-600 flex justify-center">
@@ -247,19 +121,19 @@ const BlogPage = () => {
 
         {/*  */}
         <div className=" bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition ml-8 mb-10 font-semibold text-lg w-76 flex">
-        <label htmlForfor="category">Choose a category:</label>
-        <select
-          id="category"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="px-4 py-2 rounded-lg border border-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50 text-gray-700 font-medium transition"
-        >
-          <option value="all">All</option>
-          <option value="Technology">Technology</option>
-          <option value="Design">Design</option>
-          <option value="Health">Health</option>
-          <option value="Travel">Travel</option>
-        </select>
+          <label htmlFor="category">Choose a category:</label>
+          <select
+            id="category"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="px-4 py-2 rounded-lg border border-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50 text-gray-700 font-medium transition"
+          >
+            <option value="all">All</option>
+            <option value="Technology">Technology</option>
+            <option value="Design">Design</option>
+            <option value="Health">Health</option>
+            <option value="Travel">Travel</option>
+          </select>
         </div>
         {/*  */}
 
@@ -303,28 +177,10 @@ const BlogPage = () => {
                   >
                     <button>View</button>
                   </Link>
-
-                  <button
-                    className="mt-auto bg-orange-600 hover:bg-orange-700 text-white px-4 py-1 rounded-lg transition w-full"
-                    onClick={() => {
-                      deleteBlog(index);
-                    }}
-                  >
-                    Delete blog
-                  </button>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div>
-          <button
-            className="mt-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-1.5 rounded-lg transition ml-8 mb-10 font-semibold text-lg"
-            onClick={submit}
-          >
-            Submit to local storage
-          </button>
         </div>
       </div>
     </>
