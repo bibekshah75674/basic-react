@@ -12,6 +12,7 @@ import { CourseDetailPage } from "./assets/CourseDetailPage";
 import CourseLists from "./assets/CourseList";
 import BlogForm from "./assets/BlogForm";
 // import TextForm from "./assets/TextForm";
+import Home from "./Home";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       {/* <UserList/> */}
 
       <Routes>
-        <Route path="/" element={<h1>This is the home page</h1>}></Route>
+        {/* <Route path="/" element={<h1>This is the home page</h1>}></Route> */}
+        <Route path="/" element={<Home/>}></Route>
         <Route path="about" element={<h1>This is about page</h1>}></Route>
         <Route path="blogs" element={<BlogPage/>}></Route>
         <Route path="blogs/:id" element={<BlogDetailPage/>}></Route>
