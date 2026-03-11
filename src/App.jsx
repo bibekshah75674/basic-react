@@ -13,8 +13,8 @@ import CourseLists from "./assets/CourseList";
 import BlogForm from "./assets/BlogForm";
 // import TextForm from "./assets/TextForm";
 import Home from "./Home";
-import About from "./assets/About";
 import NewBlog from "./assets/NewBlog";
+import About from "./assets/About";
 
 
 function App() {
@@ -29,7 +29,8 @@ function App() {
         {/* <Route path="/" element={<h1>This is the home page</h1>}></Route> */}
         <Route path="/" element={<Home/>}></Route>
         <Route path="about" element={<About/>}></Route>
-        <Route path="newblog" element={<NewBlog/>}></Route>
+        <Route path="newblog" element={<NewBlog/>}/><Route/>
+        <Route path="blogs" element={<BlogPage/>}></Route>
         <Route path="blogs/:id" element={<BlogDetailPage/>}></Route>
         <Route path="blogform" element={<BlogForm/>}></Route>
         <Route path="courses" element={<CourseLists />} />
