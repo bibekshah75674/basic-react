@@ -287,11 +287,11 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="flex flex-col">
-        <h2 className="ml-4 text-4xl font-medium text-amber-500">Post a blog</h2>
+      <div className="flex flex-col gap-2">
+        <h2 className="ml-4 text-4xl font-medium text-amber-500">Edit/Post a blog</h2>
 
         <input
-          className="m-4 border-2"
+          className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={title}
           placeholder="category title"
@@ -299,7 +299,7 @@ export default function Home() {
         />
 
         <input
-          className="m-4 border-2"
+          className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={description}
           placeholder="category description"
@@ -307,7 +307,7 @@ export default function Home() {
         />
 
         <input
-          className="m-4 border-2"
+          className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={author}
           placeholder="blog author"
@@ -315,7 +315,7 @@ export default function Home() {
         />
 
         <input
-          className="m-4 border-2"
+          className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={category}
           placeholder="Blog Category"
@@ -323,7 +323,7 @@ export default function Home() {
         />
 
         <input
-          className="ml-4 border-2"
+          className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={image}
           placeholder="Blog Image"
