@@ -148,6 +148,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const [blog, setBlog] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -167,6 +168,16 @@ export default function Home() {
       console.log(err);
     }
   };
+
+  // fetch all categories for dropdown
+  const fetchCategories = async()=>{
+    try{
+      const res = await axios.get("http://localhost:8000/category/getAll")
+      setCategories(res.data)
+    } catch(err){
+      console.log(err)
+    }
+  }
 
   const addBlog = async () => {
     try {
@@ -237,6 +248,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchBlog();
+    fetchCategories();
   }, []);
 
   return (
@@ -261,7 +273,7 @@ export default function Home() {
             <p className="text-gray-600 text-sm mt-2 ">{item.description}</p>
 
             <div className="mt-3 text-sm text-gray-500">
-            <p>{item.category}</p>
+            <p>Category:{item.category?.title || "Uncategorized"}</p>
             <p>{item.author}</p>
             </div>
 
@@ -313,14 +325,21 @@ export default function Home() {
           placeholder="blog author"
           onChange={(e) => setAuthor(e.target.value)}
         />
-
+{/* 
         <input
           className="ml-4 border-2 rounded-2xl p-2"
           type="text"
           value={category}
           placeholder="Blog Category"
           onChange={(e) => setCategory(e.target.value)}
-        />
+        /> */}
+
+        <select className="ml-4 border-2 rounded-2xl p-2" value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="">Select Category</option>
+          {categories.map((cat)=>(
+            <option key={cat._id} value={cat._id}>{cat.title}</option>
+          ))}
+        </select>
 
         <input
           className="ml-4 border-2 rounded-2xl p-2"
