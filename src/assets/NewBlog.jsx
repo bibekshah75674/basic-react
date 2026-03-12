@@ -315,7 +315,7 @@ export default function NewBlog() {
             className="ml-4 border-2 rounded-2xl p-2"
             type="text"
             value={title}
-            placeholder="category title"
+            placeholder="Blog Title"
             onChange={(e) => setTitle(e.target.value)}
           />
 
@@ -323,7 +323,7 @@ export default function NewBlog() {
             className="ml-4 border-2 rounded-2xl p-2"
             type="text"
             value={description}
-            placeholder="category description"
+            placeholder="Blog Description"
             onChange={(e) => setDescription(e.target.value)}
           />
 
@@ -331,7 +331,7 @@ export default function NewBlog() {
             className="ml-4 border-2 rounded-2xl p-2"
             type="text"
             value={author}
-            placeholder="blog author"
+            placeholder="Blog Author"
             onChange={(e) => setAuthor(e.target.value)}
           />
           {/* 
