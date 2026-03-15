@@ -145,6 +145,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import { IconThumbUp,IconMessageCircle  } from "@tabler/icons-react";
 
 export default function NewBlog() {
   const [blog, setBlog] = useState([]);
@@ -158,6 +159,9 @@ export default function NewBlog() {
 
   const [editId, setEditId] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+
+  
+
 
   const fetchBlog = async () => {
     try {
@@ -246,10 +250,14 @@ export default function NewBlog() {
     }
   };
 
+ 
+
   useEffect(() => {
     fetchBlog();
     fetchCategories();
   }, []);
+  console.log(blog)
+
 
   return (
     <>
@@ -264,9 +272,9 @@ export default function NewBlog() {
           {blog.map((item, index) => (
             <div
               key={item._id}
-              className="bg-white rounded-xl border-2 overflow-hidden "
+              className="bg-white rounded-xl border-2 overflow-hidden p-2"
             >
-              {/* <img src="{item.image}" alt="{item.title}" /> */}
+              {/* <img src={ item.image || "https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?cs=srgb&dl=pexels-pixabay-261662.jpg&fm=jpg"}  alt={item.title} className="w-full h-48 object-cover"/> */}
               <img
                 src="https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?cs=srgb&dl=pexels-pixabay-261662.jpg&fm=jpg"
                 alt="{item.title}"
@@ -287,7 +295,8 @@ export default function NewBlog() {
 
               <p>Date:{item.date}</p>
 
-              <div className="flex flex-row justify-end gap-1.5 p-2">
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-row gap-1 ">
                 <button
                   onClick={() => editBlog(item)}
                   className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
@@ -301,8 +310,17 @@ export default function NewBlog() {
                 >
                   Delete
                 </button>
+                </div>
+
+                <div className="flex flex-row gap-2 m-2">
+                <IconThumbUp className="cursor-pointer"/>
+                <IconMessageCircle/>
+                </div>
+
               </div>
+              
             </div>
+            
           ))}
         </div>
 
@@ -363,7 +381,6 @@ export default function NewBlog() {
             placeholder="Blog Image"
             onChange={(e) => setImage(e.target.value)}
           />
-
           <button
             onClick={isEditing ? updateBlog : addBlog}
             className="bg-amber-500 rounded m-4"
@@ -372,6 +389,7 @@ export default function NewBlog() {
           </button>
         </div>
       </div>
+      
     </>
   );
 }

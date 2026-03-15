@@ -1,9 +1,15 @@
 import React from "react";
+import { Checkbox } from '@mantine/core';
 
 function About() {
   return (
     <>
       <h1>This is about page</h1>
+      <Checkbox
+      defaultChecked
+      label="I agree to sell my privacy"
+      color="rgba(181, 118, 118, 1)"
+    />
     </>
   );
 }
