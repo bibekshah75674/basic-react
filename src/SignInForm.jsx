@@ -12,8 +12,11 @@ import { useState } from "react";
 import { useForm } from "@mantine/form";
 import axios from "axios";
 
+import { useNavigate } from "react-router-dom";
+
 export default function SignInForm() {
   const [activeTab, setActiveTab] = useState("login");
+  const navigate = useNavigate();
 
   // Login Form
   const loginForm = useForm({
@@ -74,6 +77,8 @@ const loginUser = async (values) => {
 
       alert("User Logged In Successfully.");
       loginForm.reset();
+      navigate("/blogs");
+
     } catch (error) {
       console.log(error);
       alert("Unregistered Email or Wrong Password.Try again.")
