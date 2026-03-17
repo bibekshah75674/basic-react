@@ -23,7 +23,9 @@ function NewNav(props) {
         </ul>
       </div>
       <div>
-        <button className='text-lg bg-amber-50 text-orange-500 px-4 py-1 rounded-lg hover:bg-amber-200 transition'>Login</button>
+        <Link to="loginsignup">
+        <button className='text-lg bg-amber-50 text-orange-500 px-4 py-1 rounded-lg hover:bg-amber-200 transition'>Sign in</button>
+        </Link>
       </div>
       </div>
     </>

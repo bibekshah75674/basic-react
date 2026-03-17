@@ -16,12 +16,13 @@ import Home from "./Home";
 import NewBlog from "./assets/NewBlog";
 import About from "./assets/About";
 import BlogPost from "./assets/BlogPost";
+import SignInForm from "./SignInForm";
 
 
 function App() {
   return (
     <>
-    <NewNav title={"My Website"}/>
+    <NewNav title={"BlogVerse"}/>
       {/* <NewTodoList/> */}
       {/* <BlogPage/> */}
       {/* <UserList/> */}
@@ -40,6 +41,7 @@ function App() {
         {/* <Route path="textform" element={<TextForm/>} /> */}
         <Route path="news" element={<NewsPortal/>}></Route>
         <Route path="contact" element={<h1>This is contact page</h1>}></Route>
+        <Route path="loginsignup" element={<SignInForm/>}></Route>
       </Routes>
     </>
   );
